@@ -52,9 +52,9 @@ const config: Config = {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: '16px',
+				md: 'calc(16px - 2px)',
+				sm: 'calc(16px - 4px)'
 			},
 			fontFamily: {
 				hubot: ['Hubot Sans', 'Roboto', 'sans-serif'],

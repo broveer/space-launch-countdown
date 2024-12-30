@@ -117,17 +117,14 @@ export default function LaunchCountdown() {
         <div className="flex flex-col items-center mt-4">
           <span className="text-sm mb-2">T minus</span>
           <div className="flex space-x-2">
-            {countdown.split('').map((char, index) => (
-              <div
-                key={index}
-                className="w-10 h-14 flex items-center justify-center bg-gray-700 border border-gray-600 text-2xl font-bold"
-              >
-                {char}
-              </div>
-            ))}
+            <div className="text-4xl font-bold font-mono bg-slate-900 p-2 rounded tracking-wide">
+              {countdown}
+            </div>
           </div>
         </div>
       </div>
+
+      <iframe className='w-full aspect-video' src="https://www.youtube.com/embed/_OBGAiJrjJU?si=5hT1R8Amu9BtEO4K&amp;controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 
       <div className='flex flex-row gap-8 sm:flex-nowrap flex-wrap'>
         {agencyData && (

@@ -117,7 +117,7 @@ export default function LaunchesPage() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredLaunches.map((launch) => (
-          <div key={launch.id} className="border p-4 rounded-lg bg-gray-800 flex flex-col">
+          <div key={launch.id} className="border p-4 bg-gray-800 flex flex-col">
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h2 className="text-xl font-bold">{launch.name}</h2>
