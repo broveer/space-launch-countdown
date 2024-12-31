@@ -66,7 +66,7 @@ export default function LaunchCountdown() {
 
         if (distance < 0) {
           clearInterval(timer)
-          setCountdown('Launch has occurred!')
+          setCountdown('Launched!')
         }
       }, 1000)
 

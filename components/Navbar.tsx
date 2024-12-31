@@ -29,7 +29,7 @@ const Navbar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="font-mona text-gray-300 hover:text-[#EF271B] px-3 py-2 rounded-md text-sm font-medium"
+                  className="font-mona text-gray-300 hover:bg-[#EF271B99] transition-all px-3 py-2 rounded text-sm font-medium"
                 >
                   {item.label}
                 </Link>
@@ -47,14 +47,13 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div 
-        className={`md:hidden fixed inset-0 z-50 bg-gray-800 transition-transform transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+      <div
+        className={`md:hidden fixed inset-0 z-50 bg-gray-800 transition-transform transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
       >
         <div className="p-4">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-hubot font-bold text-[#EF271B]">space.broveer.xyz</h2>
+            <h2 className="text-2xl font-hubot font-bold">space.broveer.xyz</h2>
             <button
               onClick={toggleMenu}
               className="p-2 rounded-md text-gray-300 hover:text-[#EF271B]"
@@ -67,16 +66,29 @@ const Navbar = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-300 hover:text-[#EF271B] px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-300 hover:bg-[#EF271B] px-3 py-2 rounded-md text-lg font-medium"
                 onClick={toggleMenu}
               >
                 {item.label}
               </Link>
             ))}
           </div>
-          <div className="mt-8">
-            <h3 className="text-lg font-mona font-semibold mb-2 text-gray-300">Follow me</h3>
+          <div className="mt-8 font-mona">
+            <h1 className='font-hubot my-1 text-xl font-bold'>I am Broveer</h1>
+            <p className="mb-4">
+              This website was created by me to provide information about upcoming space launches.
+              <br></br>I am passionate about space exploration and technology.
+              <br></br>Feel free to check out my other projects.
+              <br></br>This website is <strong>open source</strong>, feel free to contribute on <Link href="https://github.com/broveer/space-launch-countdown" className="text-blue-400 hover:underline">GitHub</Link>.
+            </p>
+            <p className="mt-4 text-sm text-gray-400">
+              Launch information sourced from <a href="https://thespacedevs.com" className="text-blue-400 hover:underline">thespacedevs.com</a>
+            </p>
+            <h3 className="text-lg font-mona font-semibold my-2 text-gray-300">Check this out</h3>
             <div className="flex font-hubot font-semibold space-x-4">
+              <Link href="https://broveer.xyz" className="font-hubot hover:underline">
+                Main Website
+              </Link>
               <a href="https://github.com/broveer" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#EF271B]">
                 GitHub
               </a>
@@ -91,7 +103,7 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div 
+        <div
           className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={toggleMenu}
         ></div>

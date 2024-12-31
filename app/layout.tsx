@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Space_Mono } from 'next/font/google'
+import Footer from '@/components/Footer'
 
 const spaceMono = Space_Mono({
   weight: ['400', '700'],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${spaceMono.variable} bg-black text-white`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )
