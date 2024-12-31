@@ -127,7 +127,8 @@ export default function LaunchesPage() {
                 <img
                   src={launch.launch_service_provider.logo_url}
                   alt={launch.launch_service_provider.name}
-                  className="w-16 h-16 mr-4 object-contain rounded-full border-l-purple-300 bg-zinc-200 p-1"
+                  className={`w-16 h-16 mr-4 object-contain rounded-full border-l-purple-300 p-1 ${['Rocket Lab', 'Russian Federal Space Agency (ROSCOSMOS)', 'China Aerospace Science and Technology Corporation'].includes(launch.launch_service_provider.name) ? 'bg-gray-900' : 'bg-zinc-200'
+                    }`}
                 />
               )}
             </div>
@@ -136,9 +137,16 @@ export default function LaunchesPage() {
           </div>
         ))}
       </div>
-      <Link href="/" className="mt-8 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+      <Link href="/" className="mt-8 inline-block px-4 py-2 bg-[#ef271b] text-white rounded hover:bg-[#ef271bDD] transition-colors">
         Back to Home
       </Link>
+      {/* <h2 className="text-2xl font-bold mt-8">Subscribe to my newsletter</h2>
+      <p className='font-mona text-gray-300 text-lg'>Stay up-to-date with all of my latest projects by subscribing to my newsletter.</p>
+      <iframe
+        src="https://broveer.kit.com/04ad9d1ead"
+        className="mt-8 w-full h-96 border rounded bg-zinc-300"
+        title="Newsletter subscription form"
+      ></iframe> */}
     </div>
   )
 }

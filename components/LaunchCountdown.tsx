@@ -40,7 +40,11 @@ interface RocketData {
   description: string;
 }
 
-export default function LaunchCountdown() {
+interface LaunchCountdownProps {
+  setBackgroundImage: (url: string) => void;
+}
+
+export default function LaunchCountdown({ setBackgroundImage }: LaunchCountdownProps) {
   const [launchData, setLaunchData] = useState<LaunchData | null>(null)
   const [countdown, setCountdown] = useState<string>('')
   const [agencyData, setAgencyData] = useState<AgencyData | null>(null);
@@ -73,6 +77,12 @@ export default function LaunchCountdown() {
       return () => clearInterval(timer)
     }
   }, [launchData])
+
+  useEffect(() => {
+    if (launchData?.launch_service_provider?.logo_url) {
+      setBackgroundImage(launchData.launch_service_provider.logo_url);
+    }
+  }, [launchData, setBackgroundImage]);
 
   async function fetchLaunchData() {
     try {
@@ -124,8 +134,6 @@ export default function LaunchCountdown() {
         </div>
       </div>
 
-      <iframe className='w-full aspect-video' src="https://www.youtube.com/embed/_OBGAiJrjJU?si=5hT1R8Amu9BtEO4K&amp;controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-
       <div className='flex flex-row gap-8 sm:flex-nowrap flex-wrap'>
         {agencyData && (
           <div className="bg-gray-800 p-6 rounded-lg">
@@ -148,20 +156,20 @@ export default function LaunchCountdown() {
         </div>
       </div>
 
-      {launchData.vidURLs && launchData.vidURLs.length > 0 && (
-        <div className="bg-gray-800 p-6 rounded-lg">
-          <h3 className="text-xl font-bold mb-2">Launch Video</h3>
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src={launchData.vidURLs[0].url}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
+        {launchData.vidURLs?.length > 0 && (
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <h3 className="text-xl font-bold mb-2">Launch Video</h3>
+            <div className="aspect-w-16 aspect-h-9">
+              <iframe
+                src={launchData.vidURLs[0].url}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+            <p className="mt-4">{launchData.vidURLs[0].description}</p>
           </div>
-          <p className="mt-4">{launchData.vidURLs[0].description}</p>
-        </div>
-      )}
+        )}
     </div>
   )
 }

@@ -16,10 +16,65 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-gray-800 border-b border-b-white shadow-md">
+      {/* <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <form 
+        action="https://app.kit.com/forms/7517748/subscriptions" 
+        className="seva-form formkit-form" 
+        method="post"
+        data-sv-form="7517748"
+        data-uid="235060aff4"
+        data-format="sticky bar"
+        data-version="5"
+        style={{backgroundColor: 'rgb(143, 81, 225)'}}
+      >
+        <div className="formkit-container" data-stacked="false">
+          <div className="formkit-content" style={{color: 'rgb(255, 255, 255)', fontWeight: 700}}>
+            <p>Stay up to date on my latest projects by signing up for my Newsletter!</p>
+          </div>
+          <div style={{color: 'rgb(255, 255, 255)'}}>
+            <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+            <div data-element="fields" className="seva-fields formkit-fields" style={{color: 'rgb(255, 255, 255)'}}>
+              <div className="formkit-field">
+                <input 
+                  className="formkit-input" 
+                  name="email_address" 
+                  aria-label="Email Address" 
+                  placeholder="Email Address" 
+                  required 
+                  type="email"
+                  style={{
+                    color: 'rgb(68, 73, 81)',
+                    borderColor: 'rgb(255, 255, 255)',
+                    borderRadius: '4px',
+                    fontWeight: 700
+                  }}
+                />
+              </div>
+              <button 
+                data-element="submit" 
+                className="formkit-submit"
+                style={{
+                  color: 'rgb(255, 255, 255)',
+                  backgroundColor: 'rgb(239, 39, 27)',
+                  borderRadius: '4px',
+                  fontWeight: 700
+                }}
+              >
+                <div className="formkit-spinner">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <span>Sign up</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-hubot font-bold text-[#EF271B]">
+            <Link href="/" className="text-2xl font-hubot font-bold">
               space.broveer.xyz
             </Link>
           </div>
