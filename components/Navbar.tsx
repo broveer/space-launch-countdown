@@ -75,7 +75,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-hubot font-bold">
-              space.broveer.xyz
+              BSLC
             </Link>
           </div>
           <div className="hidden md:block">
@@ -107,8 +107,8 @@ const Navbar = () => {
           }`}
       >
         <div className="p-4">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-hubot font-bold">space.broveer.xyz</h2>
+          <div className="flex justify-between items-start mb-4">
+            <h2 className="text-2xl font-hubot font-bold">Broveer's Space Launch Countdown</h2>
             <button
               onClick={toggleMenu}
               className="p-2 rounded-md text-gray-300 hover:text-[#EF271B]"
@@ -121,7 +121,7 @@ const Navbar = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-300 hover:bg-[#EF271B] px-3 py-2 rounded-md text-lg font-medium"
+                className="text-gray-300 hover:bg-[#EF271B] py-2 rounded-md text-lg font-medium"
                 onClick={toggleMenu}
               >
                 {item.label}
