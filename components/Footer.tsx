@@ -1,4 +1,4 @@
-import { Link } from "lucide-react"
+// import { Link } from "lucide-react"
 
 const Footer = () => {
     return (
@@ -41,7 +41,7 @@ const Footer = () => {
                     </div>
                     <div className="sm:order-1 text-center sm:text-left">
                         <h2 className="text-lg font-hubot font-semibold text-white">
-                            Broveer's Spacecraft Launch Countdown
+                            Broveer&#39;s Spacecraft Launch Countdown
                         </h2>
                         <p className="mt-2 font-mona font-medium text-sm text-gray-300">
                             © {new Date().getFullYear()} All rights reserved.

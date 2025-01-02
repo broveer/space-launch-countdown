@@ -108,7 +108,7 @@ const Navbar = () => {
       >
         <div className="p-4">
           <div className="flex justify-between items-start mb-4">
-            <h2 className="text-2xl font-hubot font-bold">Broveer's Space Launch Countdown</h2>
+            <h2 className="text-2xl font-hubot font-bold">Broveer&#39;s Space Launch Countdown</h2>
             <button
               onClick={toggleMenu}
               className="p-2 rounded-md text-gray-300 hover:text-[#EF271B]"
